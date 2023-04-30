@@ -42,7 +42,7 @@ const OurVulenteers = () => {
     };
     return (
         <div>
-            <h2 className="text-3xl font-bold text-center">Our Vulenteers</h2>
+            <h2 className="text-2xl font-bold text-center lg:text-3xl">Our Vulenteers</h2>
             {/* <Carousel className="mt-14  ">
                 <div>
                     <img src="/vone.png" alt="image1" />
