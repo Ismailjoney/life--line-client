@@ -26,7 +26,7 @@ const ContactUs = () => {
                             <FaVoicemail className='h-8 w-8' />
                             <div className='mx-4'>
                                 <h2 className="text-2xl font-bold   ">Email</h2>
-                                <h3>1207-Dhaka,Banglades</h3>
+                                <h3>teamwork@gmail.com</h3>
                             </div>
                         </div>
 
