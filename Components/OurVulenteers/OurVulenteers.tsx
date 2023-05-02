@@ -1,100 +1,57 @@
-
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from 'react-responsive-carousel';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import VulenteerDetails from './VulenteerDetails'
 
 const OurVulenteers = () => {
-    var settings = {
-        dots: true,
-        infinite: false,
-        speed: 400,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        initialSlide: 0,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
+
+    const vulenters = [
+        {
+            "id": 1010,
+            // "img": vone,
+            "name": "Shahadat Hossain",
+            "position": "Team Leader"
+        },
+        {
+            "id": 1020,
+            "img": "https://i.ibb.co/SPKz80N/joney.png",
+            "name": "MD Ismail Hossen Joney",
+            "position" :"Member"
+        },
+        {
+            "id": 1030,
+            "img": "https://i.ibb.co/BzPZNcF/risan.png",
+            "name": "Risan Ahamed",
+            "position" :"Member"
+        },
+        {
+            "id": 1040,
+            "img": "https://i.ibb.co/sCtz6Qq/aminul.png",
+            "name": "Aminul Islam",
+            "position" :"Member"
+        },
+        {
+            "id": 1050,
+            "img":  "https://i.ibb.co/gjQXz1c/rabiul.png",
+            "name": "Md Rabiul Islam",
+            "position" :"Member"
+        },
+        {
+            "id": 1060,
+            // "img": vone,
+            "name": "Suman Chandra Barman",
+            "position" :"Member"
+        }
+    ]
+
     return (
-        <div>
+        <div className='my-20'>
             <h2 className="text-2xl font-bold text-center lg:text-3xl">Our Vulenteers</h2>
-            {/* <Carousel className="mt-14  ">
-                <div>
-                    <img src="/vone.png" alt="image1" />
-                    <p className="legend">Image 1</p>
-
-                </div>
-                <div>
-                    <img src="/vtwo.png" alt="image2" />
-                    <p className="legend">Image 2</p>
-
-                </div>
-                <div>
-                    <img src="/vthree.png" alt="image3" />
-                    <p className="legend">Image 3</p>
-
-                </div>
-                <div>
-                    <img src="/vfour.png" alt="image4" />
-                    <p className="legend">Image 4</p>
-
-                </div>
-                <div>
-                    <img src="/vfive.png" alt="image5" />
-                    <p className="legend">Image 5</p>
-
-                </div>
-            </Carousel> */}
-            <div className="mt-4 ">
-                <Slider  {...settings}>   
-                    <div className="w-full h-72">
-                        <img className="px-2" src="/vone.png" alt="" /><br />
-                        <h3 className="text-center font-bold">JONEY</h3>
-                    </div>
-                    <div className="w-full h-72">
-                        <img className="px-2" src="/vone.png" alt="" /><br />
-                        <h3 className="text-center font-bold">JONEY</h3>
-                    </div>
-                    <div className="w-full h-68">
-                        <img className="px-2" src="/vone.png" alt="" /><br />
-                        <h3 className="text-center font-bold">JONEY</h3>
-                    </div>
-                    <div className="w-full h-68">
-                        <img className="px-2" src="/vone.png" alt="" /><br />
-                        <h3 className="text-center font-bold">JONEY</h3>
-                    </div>
-                    <div className="w-full h-68">
-                        <img className="px-2" src="/vone.png" alt="" /><br />
-                        <h3 className="text-center font-bold">JONEY</h3>
-                    </div>
-
-                </Slider>
-            </div>
+           <div className='grid grid-cols-1 gap-8 lg:grid-cols-3 '>
+           {
+                vulenters.map(vulenter => <VulenteerDetails
+                    key={vulenter.id}
+                    vulenter={vulenter}
+                ></VulenteerDetails>)
+            }
+           </div>
         </div>
     );
 };
