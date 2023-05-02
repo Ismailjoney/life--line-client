@@ -43,7 +43,7 @@ const OurVulenteers = () => {
 
     return (
         <div className='my-20'>
-            <h2 className="text-2xl font-bold text-center lg:text-3xl">Our Vulenteers</h2>
+            <h2 className="text-2xl font-bold text-center lg:text-3xl lg:my-2">Our Vulenteers</h2>
            <div className='grid grid-cols-1 gap-8 lg:grid-cols-3 '>
            {
                 vulenters.map(vulenter => <VulenteerDetails
